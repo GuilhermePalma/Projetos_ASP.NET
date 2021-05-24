@@ -1,19 +1,31 @@
 ﻿@model ValidacaoMVC.Models.UsuarioModel
 
 @{
-    ViewBag.Title = "Cadastro do Usuario";
+    ViewBag.Title = "Resultado Usuario";
 }
-    
+
 <h1>Listar Usuario</h1>
+
+<hr />
 <br />
 
-<div class="editor-label">
-    <p>Nome do usuario: @Html.DisplayFor(m => m.NomeUser)</p>
-    <p>Observação: @Html.DisplayFor(m => m.Observacao)</p>
-    <p>Data de Nascimento: @Html.DisplayFor(m => m.DtNascimento)</p>
-    <p>Email: @Html.DisplayFor(m => m.Email)</p>
-    <p>Login: @Html.DisplayFor(m => m.Login)</p>
-
-    @Html.ActionLink("Voltar", "Index", "Home")
-
+<div class="row">
+    <div class="col-md-12">
+        <p>Nome do usuario: @Html.DisplayFor(m => m.NomeUser)</p>
+    </div>
+    <div class="col-md-12">
+        <p>Data de Nascimento: @Html.DisplayFor(m => m.DtNascimento)</p>
+    </div>
+    <div class="col-md-12">
+        <p>Login: @Html.DisplayFor(m => m.Login)</p>
+    </div>
+    <div class="col-md-12">
+        <p>Email: @Html.DisplayFor(m => m.Email)</p>
+    </div><div class="col-md-12">
+        <p>Observação: @Html.DisplayFor(m => m.Observacao)</p>
+    </div>
+    <div class="col-md-12">
+        <br />
+        @Html.ActionLink("Voltar", "Index", "Home")
+    </div>
 </div>

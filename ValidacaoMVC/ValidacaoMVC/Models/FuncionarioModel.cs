@@ -24,7 +24,7 @@ namespace ValidacaoMVC.Models
 
 
         [Required(ErrorMessage = "O Cargo deve ser informado !")]
-        [StringLength(50, MinimumLength = 5, ErrorMessage = "O cargo deve Ter mais que 3 Caracteres")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "O cargo deve Ter entre 3 a 50 Caracteres")]
         [DisplayName("Cargo")]
         public string Cargo { get => cargo; set => cargo = value; }
 

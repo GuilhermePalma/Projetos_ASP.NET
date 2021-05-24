@@ -1,19 +1,26 @@
 ﻿@model ValidacaoMVC.Models.FuncionarioModel
 
 @{
-    ViewBag.Title = "Cadastro do Funcionario";
+    ViewBag.Title = "Resultado Funcionario";
 }
 
 <h1>Listar Funcionario</h1>
+
+<hr />
 <br />
 
-
-<div class="editor-label">
-    <p>Código: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.Codigo)</p>
-    <p>Nome do Funcionário: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.NomeFuncionario)</p>
-    <p>Função do Funcionario: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.Cargo)</p>
-
-    @Html.ActionLink("Voltar", "Index", "Home")
-
+<div class="row">
+    <div class="col-md-12">
+        <p>Código: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.Codigo)</p>
+    </div>
+    <div class="col-md-12">
+        <p>Nome do Funcionário: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.NomeFuncionario)</p>
+    </div>
+    <div class="col-md-12">
+        <p>Função do Funcionario: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.Cargo)</p>
+    </div>
+    <div class="col-md-12">
+        <br />
+        @Html.ActionLink("Voltar", "Index", "Home")
+    </div>
 </div>
-

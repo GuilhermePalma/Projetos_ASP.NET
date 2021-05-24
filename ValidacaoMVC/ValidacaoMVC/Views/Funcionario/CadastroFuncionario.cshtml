@@ -8,51 +8,45 @@
 <h2>Cadastro de Funcionario</h2>
 
 <hr />
+<br />
 
 @using (Html.BeginForm("ResultadoFuncionario", "Funcionario", FormMethod.Post))
 {
 
+    <div class="row">
 
-<div class="row">
-    <div class="col-md-12">
-        @Html.LabelFor(FuncionarioModel => FuncionarioModel.Codigo, new { @class = "form-label" })
-    </div>
-    <div class="col-md-12">
-        @Html.EditorFor(FuncionarioModel => FuncionarioModel.Codigo, new { @class = "form-control" })
-        <br />
-        @Html.ValidationMessageFor(m => m.Codigo)
-    </div>
+        <div class="col-md-12">
+            @Html.LabelFor(FuncionarioModel => FuncionarioModel.Codigo, new { @class = "form-label" })
+        </div>
+        <div class="col-md-12">
+            @Html.EditorFor(FuncionarioModel => FuncionarioModel.Codigo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Codigo)
+        </div>
 
-    
+        <div class="col-md-12">
+            <br />
+            @Html.LabelFor(FuncionarioModel => FuncionarioModel.NomeFuncionario, new { @class = "form-label" })
+        </div>
+        <div class="col-md-12">
+            @Html.EditorFor(FuncionarioModel => FuncionarioModel.NomeFuncionario, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.NomeFuncionario)
+        </div>
 
-    <div class="col-md-12">
-        <br />
-        @Html.LabelFor(FuncionarioModel => FuncionarioModel.NomeFuncionario, new { @class = "form-label" })
-    </div>
-    <div class="col-md-12">
-        @Html.EditorFor(FuncionarioModel => FuncionarioModel.NomeFuncionario, new { @class = "form-control" })
-        <br />
-        @Html.ValidationMessageFor(m => m.NomeFuncionario)
-    </div>
+        <div class="col-md-12">
+            <br />
+            @Html.LabelFor(FuncionarioModel => FuncionarioModel.Cargo, new { @class = "form-label" })
+        </div>
+        <div class="col-md-12">
+            @Html.EditorFor(FuncionarioModel => FuncionarioModel.Cargo, new { @class = "form-control", @value = "" })
+            @Html.ValidationMessageFor(FuncionarioModel => FuncionarioModel.Cargo)
+        </div>
 
+        <div class="col-md-12">
+            <br />
+            @Html.ActionLink("Cancelar", "Index", "Home")
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+        </div>
 
-    <div class="col-md-12">
-        <br />
-        @Html.LabelFor(FuncionarioModel => FuncionarioModel.Cargo, new { @class = "form-label" })
-    </div>
-    <div class="col-md-12">
-        @Html.EditorFor(FuncionarioModel => FuncionarioModel.Cargo, new { @class = "form-control", @value = "" })
-        <br />
-        @Html.ValidationMessageFor(FuncionarioModel => FuncionarioModel.Cargo)
-    </div>
-
-</div>
-
-    <br />
-
-    <div class="col-md-12">
-        @Html.ActionLink("Cancelar", "Index", "Home")
-        <input class="btn btn-primary" type="submit" value="Enviar" />
     </div>
 
 }

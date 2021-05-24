@@ -14,6 +14,7 @@ namespace ValidacaoMVC.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult ResultadoFuncionario(FuncionarioModel model)
         {
