@@ -1,0 +1,82 @@
+﻿@model ValidacaoMVC.Models.UsuarioModel
+
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Cadastro de Usuário</h2>
+
+<hr />
+
+@using (Html.BeginForm("ResultadoUsuario", "Usuario", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <div class="row">
+        <div class="col-12">
+            @Html.LabelFor(m => m.Codigo, new { @class = "form-label" })
+            @Html.EditorFor(m => m.Codigo, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.Codigo)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.NomeUser, new { @class = "form-label" })
+            @Html.EditorFor(m => m.NomeUser, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.NomeUser)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.Observacao, new { @class = "form-label" })
+            @Html.EditorFor(m => m.Observacao, new { @class = "form-control", @value = "" })
+            <br />
+            @Html.ValidationMessageFor(m => m.Observacao)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.DtNascimento, new { @class = "form-label" })
+            @Html.EditorFor(m => m.DtNascimento, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.DtNascimento)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+            @Html.EditorFor(m => m.Email, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.Login, new { @class = "form-label" })
+            @Html.EditorFor(m => m.Login, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.Login)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.Senha, new { @class = "form-label" })
+            @Html.EditorFor(m => m.Senha, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.Senha)
+        </div>
+        <div class="col-12">
+            @Html.LabelFor(m => m.ConfirmaSenha, new { @class = "form-label" })
+            @Html.EditorFor(m => m.ConfirmaSenha, new { @class = "form-control" })
+            <br />
+            @Html.ValidationMessageFor(m => m.ConfirmaSenha)
+        </div>
+
+
+        <div class="col-12 ">
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+        </div>
+
+        <br />
+        <div class="col-12 ">
+            @Html.ActionLink("Cancelar", "Index", "Home")
+        </div>
+
+    </div>
+
+
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

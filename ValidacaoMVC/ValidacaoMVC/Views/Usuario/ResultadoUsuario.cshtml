@@ -1,0 +1,19 @@
+﻿@model ValidacaoMVC.Models.UsuarioModel
+
+@{
+    ViewBag.Title = "Cadastro do Usuario";
+}
+    
+<h1>Listar Usuario</h1>
+<br />
+
+<div class="editor-label">
+    <p>Nome do usuario: @Html.DisplayFor(m => m.NomeUser)</p>
+    <p>Observação: @Html.DisplayFor(m => m.Observacao)</p>
+    <p>Data de Nascimento: @Html.DisplayFor(m => m.DtNascimento)</p>
+    <p>Email: @Html.DisplayFor(m => m.Email)</p>
+    <p>Login: @Html.DisplayFor(m => m.Login)</p>
+
+    @Html.ActionLink("Voltar", "Index", "Home")
+
+</div>

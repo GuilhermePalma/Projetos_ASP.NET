@@ -1,0 +1,19 @@
+﻿@model ValidacaoMVC.Models.FuncionarioModel
+
+@{
+    ViewBag.Title = "Cadastro do Funcionario";
+}
+
+<h1>Listar Funcionario</h1>
+<br />
+
+
+<div class="editor-label">
+    <p>Código: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.Codigo)</p>
+    <p>Nome do Funcionário: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.NomeFuncionario)</p>
+    <p>Função do Funcionario: @Html.DisplayFor(FuncionarioModel => FuncionarioModel.Cargo)</p>
+
+    @Html.ActionLink("Voltar", "Index", "Home")
+
+</div>
+
