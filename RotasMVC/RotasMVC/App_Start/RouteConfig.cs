@@ -21,7 +21,7 @@ namespace RotasMVC
 
             routes.MapRoute(
                 name: "Last_News",
-                url: "Utlimas_Noticias/",
+                url: "Ultimas_Noticias/",
                 defaults: new { controller = "News", action = "LastNews", id = UrlParameter.Optional }
             );
 
@@ -32,9 +32,9 @@ namespace RotasMVC
             );
 
             routes.MapRoute(
-                name: "Select_category",
+                name: "Select_Category",
                 url: "Noticas/{category}",
-                defaults: new { controller = "News", action = "ShowCategaory", id = UrlParameter.Optional }
+                defaults: new { controller = "News", action = "ShowCategory", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(

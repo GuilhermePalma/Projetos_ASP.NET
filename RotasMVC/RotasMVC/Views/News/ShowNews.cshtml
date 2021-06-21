@@ -1,5 +1,6 @@
 ﻿
 @model RotasMVC.Models.News
+
 @{
     ViewBag.Title = "Mostrar Noticia";
 }
@@ -7,7 +8,7 @@
 <h2>@Model.Title</h2>
 
 <em>
-    @Model.Date - @Html.ActionLink(Model.Category, "ShowCategaory", 
+    @Model.Date - @Html.ActionLink(Model.Category, "ShowCategory", 
                  new { @category = Model.Category }, null)
 </em>
 

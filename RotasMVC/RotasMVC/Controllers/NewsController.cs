@@ -11,6 +11,11 @@ namespace RotasMVC.Controllers
     {
         private IEnumerable<News> news = new News().allNews().OrderByDescending(x => x.Date);
 
+        public ActionResult Criatividade()
+        {
+            return View(news);
+        }
+
         public ActionResult AllNews()
         {
             return View(news);
@@ -34,7 +39,7 @@ namespace RotasMVC.Controllers
             return View(result);
         }
 
-        public ActionResult ShowCategaory(string category)
+        public ActionResult ShowCategory(string category)
         {
             // Pega as Categorias de Forma distinta e cria uma List
             var categorys = news.Where(x => x.Category.ToLower() == category.ToLower()).ToList(); 
