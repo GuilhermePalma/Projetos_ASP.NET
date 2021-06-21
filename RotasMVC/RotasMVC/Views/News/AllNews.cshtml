@@ -1,0 +1,29 @@
+﻿
+@model IEnumerable<RotasMVC.Models.News>
+
+
+@{
+    ViewBag.Title = "Noticias";
+}
+
+<h2>Notícias</h2>
+<br />
+
+<ul>
+    @foreach(var item in Model)
+    {
+    <li>
+        @Html.ActionLink(item.Title, "ShowNews", "News", new { 
+           @category = item.Category, 
+           @titleNews = item.Title.ToLower(), 
+           @newsIdChosed = item.Id }, null);
+        <!-- Tag 'em' = Destaque do resto do texto
+         Tag 'b' = Destaque de Palavras-Chaves, normalmente em Negrito-->
+        <em>@Html.DisplayFor(modelItem => item.Category) - </em>
+        <b>@Html.DisplayFor(modelItem => item.Date) </b>
+    </li>
+    }
+</ul>
+
+
+
